@@ -40,12 +40,37 @@ const teamMembers = [
       ruolo: "Graphic Designer",
       foto: "barbara-ramos-graphic-designer.jpg",
     },
-  ];
+];
   
-  // Stampo su console le informazioni di ogni membro del team
-  for (const member of teamMembers) {
-    console.log(`Nome: ${member.nome}`);
-    console.log(`Ruolo: ${member.ruolo}`);
-    console.log(`Foto: ${member.foto}`);
-    console.log("---");
-  }
+// Stampo su console le informazioni di ogni membro del team
+// for (const member of teamMembers) {
+//     console.log(`Nome: ${member.nome}`);
+//     console.log(`Ruolo: ${member.ruolo}`);
+//     console.log(`Foto: ${member.foto}`);
+//     console.log("---");
+// }
+
+// Seleziono il container nel DOM dove inserire le informazioni
+const teamContainer = document.querySelector(".team-container");
+
+// ciclo for che itera per ogni membro del team
+for (const member of teamMembers) {
+
+    const memberElement = document.createElement("div");
+    memberElement.classList.add("member");
+
+    const memberName = document.createElement("h3");
+    memberName.innerText = member.nome;
+
+    const memberRole = document.createElement("p");
+    memberRole.innerText = member.ruolo;
+
+    const memberPhoto = document.createElement("img");
+    memberPhoto.src = `img/${member.foto}`;
+
+    memberElement.append(memberName);
+    memberElement.append(memberRole);
+    memberElement.append(memberPhoto);
+
+    teamContainer.append(memberElement);
+}

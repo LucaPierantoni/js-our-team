@@ -9,40 +9,43 @@
 // BONUS 2:
 // Organizzare i singoli membri in card/schede
 
-const teamMember = [
+const teamMembers = [
     {
-        nome: 'Wayne Barnett', 
-        ruolo: 'Founder & CEO',	         
-        foto: 'wayne-barnett-founder-ceo.jpg'
+      nome: "Wayne Barnett",
+      ruolo: "Founder & CEO",
+      foto: "wayne-barnett-founder-ceo.jpg",
     },
-
     {
-        nome: 'Angela Caroll',	 
-        ruolo: 'Chief Editor',	         
-        foto: 'angela-caroll-chief-editor.jpg'
+      nome: "Angela Caroll",
+      ruolo: "Chief Editor",
+      foto: "angela-caroll-chief-editor.jpg",
     },
-
     {
-        nome: 'Walter Gordon',	 
-        ruolo: 'Office Manager',	         
-        foto: 'walter-gordon-office-manager.jpg'
+      nome: "Walter Gordon",
+      ruolo: "Office Manager",
+      foto: "walter-gordon-office-manager.jpg",
     },
-
     {
-        nome: 'Angela Lopez',	 
-        ruolo: 'Social Media Manager', 	 
-        foto: 'angela-lopez-social-media-manager.jpg'
+      nome: "Angela Lopez",
+      ruolo: "Social Media Manager",
+      foto: "angela-lopez-social-media-manager.jpg",
     },
-
     {
-        nome: 'Scott Estrada',	 
-        ruolo: 'Developer',	             
-        foto: 'scott-estrada-developer.jpg'
+      nome: "Scott Estrada",
+      ruolo: "Developer",
+      foto: "scott-estrada-developer.jpg",
     },
-
     {
-        nome: 'Barbara Ramos',	 
-        ruolo: 'Graphic Designer',	     
-        foto: 'barbara-ramos-graphic-designer.jpg',
-    }
-];
+      nome: "Barbara Ramos",
+      ruolo: "Graphic Designer",
+      foto: "barbara-ramos-graphic-designer.jpg",
+    },
+  ];
+  
+  // Stampo su console le informazioni di ogni membro del team
+  for (const member of teamMembers) {
+    console.log(`Nome: ${member.nome}`);
+    console.log(`Ruolo: ${member.ruolo}`);
+    console.log(`Foto: ${member.foto}`);
+    console.log("---");
+  }
